@@ -9,6 +9,8 @@ import { PetComponent } from './pet-image/pet-image.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { HackerNewsComponent } from './hacker-news/hacker-news.component';
 import { LikesComponent } from './likes/likes.component';
+import { NameCardComponent } from './name-card/name-card.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { LikesComponent } from './likes/likes.component';
     PetComponent,
     CalculatorComponent,
     HackerNewsComponent,
-    LikesComponent
+    LikesComponent,
+    NameCardComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
