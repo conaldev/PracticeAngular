@@ -11,6 +11,8 @@ import { HackerNewsComponent } from './hacker-news/hacker-news.component';
 import { LikesComponent } from './likes/likes.component';
 import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     HackerNewsComponent,
     LikesComponent,
     NameCardComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    HeroesComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,
