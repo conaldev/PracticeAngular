@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-likes',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./likes.component.scss']
 })
 export class LikesComponent implements OnInit {
-  likes: number = 0;
+  @Input() likes: number;
   // tslint:disable-next-line:typedef
   likeThis() {
     this.likes++;
