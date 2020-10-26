@@ -1,29 +1,19 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { TodoComponent } from './todo/todo.component';
+import {NgModule} from '@angular/core';
+import {TimelinesComponent} from './timelines/timelines.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-
-    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
-    // and returns simulated server responses.
-    // Remove it when a real server is ready to receive requests.
-    ReactiveFormsModule
-  ],
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    TodoComponent
+    TimelinesComponent
   ],
-  bootstrap: [ AppComponent ]
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
