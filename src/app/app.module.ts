@@ -2,19 +2,21 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.component';
-import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
+import {ImageGalleryModule} from './image-gallery/image-gallery.module';
+import {GalleryConfig} from './image-gallery/token';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    YoutubePlaylistComponent,
-    YoutubePlayerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    ImageGalleryModule,
   ],
+  providers: [{
+    provide: GalleryConfig, useValue: 2
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
