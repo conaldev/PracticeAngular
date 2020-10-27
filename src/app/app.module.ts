@@ -2,21 +2,28 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {ImageGalleryModule} from './image-gallery/image-gallery.module';
-import {GalleryConfig} from './image-gallery/token';
+import { BlogComponent } from './blog/blog.component';
+import { BlogEditComponent } from './blog-edit/blog-edit.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    BlogComponent,
+    BlogEditComponent,
+    BlogDetailComponent,
   ],
   imports: [
     BrowserModule,
-    ImageGalleryModule,
+    ReactiveFormsModule,
+    RouterModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [{
-    provide: GalleryConfig, useValue: 2
-  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
